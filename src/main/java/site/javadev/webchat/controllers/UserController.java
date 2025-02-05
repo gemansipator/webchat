@@ -1,6 +1,7 @@
 package site.javadev.webchat.controllers;
 
 // Импортируем необходимые классы и аннотации из Spring и других библиотек
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +16,10 @@ import java.util.List;
 @RestController
 // Определяет базовый URL-адрес для всех методов этого контроллера
 @RequestMapping("/users")
+@Tag(name = "Пользователи", description = "API для управления пользователями")
 // Аннотация @RequiredArgsConstructor автоматически генерирует конструктор с необходимыми зависимостями
 @RequiredArgsConstructor
-public class UserConroller {
+public class UserController {
 
     // Репозиторий для работы с пользователями
     private final UserRepository userRepository;

@@ -28,7 +28,10 @@ public class UserController {
     @GetMapping
     public ResponseEntity<List<UserDto>> getUsers() {
         // Создаем тестового пользователя (захардкоженные данные)
-        UserDto userDto = new UserDto(1, "Jonn", "Doe@gmai.com");
+        UserDto userDto = new UserDto();
+        userDto.setId(1);
+        userDto.setName("Jonn");
+        userDto.setEmail("Doe@gmai.com");
 
         // Возвращаем список пользователей в формате JSON с HTTP-статусом 200 (OK)
         return ResponseEntity.ok(List.of(userDto));

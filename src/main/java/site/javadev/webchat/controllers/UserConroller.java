@@ -1,4 +1,4 @@
-package site.javadev.webchat.controller;
+package site.javadev.webchat.controllers;
 
 // Импортируем необходимые классы и аннотации из Spring и других библиотек
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/users")
 // Аннотация @RequiredArgsConstructor автоматически генерирует конструктор с необходимыми зависимостями
 @RequiredArgsConstructor
-public class UserConroller { // Ошибка в названии класса, должно быть UserController
+public class UserConroller {
 
     // Репозиторий для работы с пользователями
     private final UserRepository userRepository;
